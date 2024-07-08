@@ -1,0 +1,31 @@
+Using global variables can lead to several issues in your code:
+
+1. Pollution of Global Namespace: Global variables are accessible throughout your entire 
+application. If not managed properly, they can lead to naming conflicts or unintended 
+overwriting of variables across different parts of your codebase.
+
+2. Accidental Modification: Since global variables can be accessed and modified from any part 
+of your code, it becomes harder to track down where and when a variable's value was changed, 
+especially in large applications.
+
+3. Security Risks: Global variables increase the risk of unintentional data manipulation or 
+security vulnerabilities. Variables holding sensitive information might be accessible where 
+they shouldn't be.
+
+4. Maintainability: Code that relies heavily on global variables can be harder to maintain and 
+debug. It becomes challenging to understand dependencies and relationships between different 
+parts of the codebase.
+
+5. Testing Difficulty: Testing becomes more complicated when using global variables, as their 
+values can affect the outcome of tests in unexpected ways. Mocking or isolating code for 
+testing becomes more cumbersome.
+
+6. Performance: Accessing global variables can sometimes be slower than accessing local 
+variables due to the way JavaScript engines optimize variable access.
+
+To mitigate these issues, it's generally recommended to limit the use of global variables 
+and instead use local variables with narrower scopes (like function or block scopes) 
+whenever possible. This approach helps improve code modularity, readability, and 
+maintainability.
+
+SOLUTION -> IIFE (read iife.txt)
