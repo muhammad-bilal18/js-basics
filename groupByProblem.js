@@ -8,16 +8,15 @@ const array= [
 ]
 
 function groupBy(array, key) {
-    let output = {};
-    for(let i = 0; i < array.length; i++) {
-        let _key = array[i][key];
-        let value = array[i];
-        if(output.hasOwnProperty(array[i][key]))
-            output[_key].push(value)
+    return array.reduce((output, current) => {
+        let _key = current[key];
+        if(output.hasOwnProperty(_key))
+            output[_key].push(current);
         else
-            output[_key] = [value];
-    }
-    return output;
+            output[_key] = [current];
+
+        return output;
+    }, {});
 }
 
 console.log(groupBy(array, 'city'));
