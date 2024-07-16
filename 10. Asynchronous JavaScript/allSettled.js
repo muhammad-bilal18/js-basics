@@ -1,3 +1,4 @@
+// allSettled
 const createPromise = (value, delay, shouldReject = false) => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {

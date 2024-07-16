@@ -1,4 +1,4 @@
-// spread operator
+// spread operator - es9
 
 let array = [1, 2, 3, 4];
 function getProduct(a, b, c, d) {

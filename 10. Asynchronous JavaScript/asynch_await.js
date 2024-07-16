@@ -1,3 +1,4 @@
+// asynch await
 async function fetchSingleUrl(url) {
     try {
         let response = await fetch(url);
@@ -30,7 +31,7 @@ async function fetchMultipleUrls(urls) {
 
         let dataPromises = responses.map(response => response.json());
         let data = await Promise.all(dataPromises);
-        
+
         console.log('Data fetched:', data);
     } catch (error) {
         console.log('Error fetching data:', error);
