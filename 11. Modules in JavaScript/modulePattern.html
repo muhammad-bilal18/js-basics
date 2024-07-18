@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module Pattern</title>
+</head>
+<body>
+    <h1 style="color: red;">What a Lovely Day!</h1>
+    <script>
+        var module = (function () {
+            const mclarenCar = {
+                brand: "McLaren",
+                model: "720S",
+                year: 2023,
+                specifications: {
+                    engine: {
+                    type: "V8",
+                    capacity: "4.0L",
+                    power: "710 hp",
+                    torque: "568 lb-ft"
+                    },
+                    performance: {
+                    topSpeed: "212 mph",
+                    acceleration: {
+                        "0-60 mph": "2.8 seconds",
+                        "0-100 mph": "5.5 seconds"
+                    }
+                    },
+                    dimensions: {
+                    length: "178.9 inches",
+                    width: "76.0 inches",
+                    height: "47.1 inches",
+                    wheelbase: "105.1 inches",
+                    curbWeight: "3153 lbs"
+                    },
+                    fuelEconomy: {
+                    city: "15 mpg",
+                    highway: "22 mpg",
+                    combined: "18 mpg"
+                    }
+                },
+                features: {
+                    interior: [
+                    "Leather upholstery",
+                    "Carbon fiber trim",
+                    "Dual-zone automatic climate control",
+                    "Touchscreen infotainment system",
+                    "Premium audio system"
+                    ],
+                    exterior: [
+                    "LED headlights",
+                    "Carbon fiber body panels",
+                    "Active aerodynamics",
+                    "Dihedral doors"
+                    ],
+                    safety: [
+                    "ABS",
+                    "Traction control",
+                    "Stability control",
+                    "Airbags"
+                    ]
+                },
+                price: "$299,000"
+            };
+
+            function display(object) {
+                console.log(object);
+            }
+
+            return {
+                display: display,
+                car: mclarenCar
+            };
+        })();
+    </script>
+    <script>
+        function fight() {
+            console.log('first rule of fight club is, you don\'t talk about fight club!');
+        }
+        let car = 'sonata';
+    </script>
+</html>

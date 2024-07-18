@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modules in JavaScript</title>
+</head>
+<body>
+    <h1 style="color: red;">What a Lovely Day!</h1>
+    <script>
+        function fight(param1 ,param2) {
+            return (param1.length > param2.length) ? `${param1} wins!` : `${param2} wins!`;
+        }
+    </script>
+    <script>
+        function fight() {
+            console.log('first rule of fight club is, you don\'t talk about fight club!');
+        }
+    </script>
+    <!-- the second fight function overrided the first fight function -->
+    <!-- so it's a big problem, as we have no access to first function -->
+</body>
+</html>
