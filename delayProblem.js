@@ -27,7 +27,17 @@ function delayedPromiseChain(promiseFunctions, delay) {
     return last;
 }
 
-let output = delayedPromiseChain(promiseFunctions, delay);
+async function solve(array, delay) {
+    let output;
+    for(func of array) {
+        await new Promise(resolve => setTimeout(resolve, delay));
+        output = await func();
+        console.log(output);
+    }
+    return output;
+}
+
+let output = solve(promiseFunctions, delay);
 output.then((value) => {
     console.log(value);
 })
